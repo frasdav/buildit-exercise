@@ -12,4 +12,8 @@
     <PackageReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Wipro.WebCrawler.App\Wipro.WebCrawler.App.csproj" />
+    <ProjectReference Include="..\Wipro.WebCrawler.Interfaces\Wipro.WebCrawler.Interfaces.csproj" />
+  </ItemGroup>
 </Project>
