@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Wipro Web Crawler";
+}
+
+@section Scripts {
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.btn-primary').on('click', function() {
+                $(this).text("Working..").prop('disabled', true);
+                $('form').submit();
+            });
+        });
+    </script>
+}
+
+<h2>Wipro Web Crawler</h2>
+
+<p>Enter a Url to crawl:</p>
+
+<form method="post">
+    <div class="form-group">
+        <div class="input-group mb-3">
+            <input class="form-control" type="text" id="url" name="url" placeholder="e.g. wiprodigital.com">
+            <div class="input-group-btn">
+                <button class="btn btn-primary" type="submit">Go</button>
+            </div>
+        </div>
+    </div>
+    <textarea class="form-control" rows="15" readonly="readonly">@ViewBag.Data</textarea>
+</form>
