@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Wipro.WebCrawler.Common.Interfaces.Helpers;
 
 namespace Wipro.WebCrawler.App.Helpers
