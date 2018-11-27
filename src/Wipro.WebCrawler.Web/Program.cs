@@ -16,7 +16,7 @@ namespace Wipro.WebCrawler.Web
                 .ConfigureAppConfiguration((hostingContext, config) =>
                 {
                     var env = hostingContext.HostingEnvironment;
-                    config.AddJsonFile("appsettings.json", true, true)
+                    config.AddJsonFile("appsettings.json", false, true)
                         .AddJsonFile($"appsettings.{env.EnvironmentName}.json", false, true);
                     config.AddEnvironmentVariables();
                 })
