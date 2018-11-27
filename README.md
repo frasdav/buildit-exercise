@@ -18,6 +18,7 @@ dotnet run --project src/Wipro.WebCrawler.Web/
 The application is containerised and stateless, and can be run on any operating system supported by .NET Core 2.1 (including Windows, Linux and MacOS). .NET Core 2.1 does not have to be installed on the host system for the container to run. ASP.NET MVC has been used to provide a web based UI for the application, with business logic abstracted away from the web/presentation layer. A limited amount of unit tests have been implemented, but the abstraction necessary to achieve a high percentage of coverage is implemented.
 ### Improvements
 This solution would benefit from the following improvements:
+  * Add error/retry handling.
   * Use parallel processing for the crawl in order to increase performance.
   * Implement a message queue and run the crawl outside the web app (in a separate application) in order to free the resources in the web app and allow for more appropriate scaling (i.e. scaling the crawler, not the presentation layer).
   * Implement the UI using a JavaScript framework so that, in tandem with the above, the UI can queue a crawl job and then check on the status of that job via a REST API implemented in the presentation layer. This would improve the user experience rather than performing full page reload as it does currently.
