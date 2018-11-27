@@ -28,9 +28,13 @@ namespace Wipro.WebCrawler.App
             if (!url.IsAbsoluteUri)
                 throw new ApplicationException("Starting Url must be absolute.");
 
+            _logger.LogInformation($"Starting {url.ToString()}.");
+
             // Invoke the recursive crawl, defining the top level domain scope as the host of the initial Uri.
             var crawlerResults = new List<CrawlerResult>();
             await CrawlAsync(url, crawlerResults, url.Host);
+
+            _logger.LogInformation($"Finished {url.ToString()}.");
 
             return crawlerResults;
         }
