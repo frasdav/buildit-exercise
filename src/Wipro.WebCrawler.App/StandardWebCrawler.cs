@@ -77,7 +77,7 @@ namespace Wipro.WebCrawler.App
             var contentType = response.Item1.Content.Headers.ContentType;
 
             // Add the Url and content type to the dictionary of crawler results.
-            crawlerResults.Add(url, contentType.ToString());
+            crawlerResults.Add(url, contentType?.ToString());
 
             // Use Xpath to get all anchor nodes that have an href.
             var anchorNodes = document.DocumentNode.SelectNodes("//a[@href]");

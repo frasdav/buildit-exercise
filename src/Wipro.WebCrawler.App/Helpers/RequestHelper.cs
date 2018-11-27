@@ -18,7 +18,9 @@ namespace Wipro.WebCrawler.App.Helpers
         {
             var response = await _httpClient.GetAsync(url).ConfigureAwait(false);
 
-            var content = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
+            var bytes = await response.Content.ReadAsByteArrayAsync().ConfigureAwait(false);
+
+            var content = System.Text.Encoding.UTF8.GetString(bytes);
 
             return new Tuple<HttpResponseMessage, string>(response, content);
         }
