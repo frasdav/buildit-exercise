@@ -2,7 +2,7 @@
 using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace Wipro.WebCrawler.Interfaces.Helpers
+namespace Wipro.WebCrawler.Common.Interfaces.Helpers
 {
     public interface IRequestHelper
     {

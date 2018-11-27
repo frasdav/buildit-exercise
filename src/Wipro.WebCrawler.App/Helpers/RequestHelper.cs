@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Net.Http;
 using System.Threading.Tasks;
-using Wipro.WebCrawler.Interfaces.Helpers;
+using Wipro.WebCrawler.Common.Interfaces.Helpers;
 
 namespace Wipro.WebCrawler.App.Helpers
 {

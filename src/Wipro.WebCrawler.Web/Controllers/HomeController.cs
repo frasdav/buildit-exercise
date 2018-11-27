@@ -1,9 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System;
-using System.Linq;
 using System.Threading.Tasks;
-using Wipro.WebCrawler.Interfaces;
+using Wipro.WebCrawler.Common.Interfaces;
 
 namespace Wipro.WebCrawler.Web.Controllers
 {
@@ -29,7 +28,7 @@ namespace Wipro.WebCrawler.Web.Controllers
 
             var results = await _webCrawler.CrawlAsync(new Uri(url));
 
-            ViewBag.Data = JsonConvert.SerializeObject(results.Select(r => new { url = r.Key, type = r.Value }), Formatting.Indented);
+            ViewBag.Data = JsonConvert.SerializeObject(results, Formatting.Indented);
 
             return View();
         }

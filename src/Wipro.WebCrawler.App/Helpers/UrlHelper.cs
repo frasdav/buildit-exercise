@@ -1,5 +1,5 @@
 ﻿using System;
-using Wipro.WebCrawler.Interfaces.Helpers;
+using Wipro.WebCrawler.Common.Interfaces.Helpers;
 
 namespace Wipro.WebCrawler.App.Helpers
 {
@@ -15,6 +15,12 @@ namespace Wipro.WebCrawler.App.Helpers
             {
                 return new Uri(parent, url);
             }
+        }
+
+        public bool IsCrawlable(Uri url)
+        {
+            return url.Scheme == "http" || url.Scheme == "https";
+
         }
     }
 }

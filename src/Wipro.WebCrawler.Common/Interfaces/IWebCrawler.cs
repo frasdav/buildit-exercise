@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Wipro.WebCrawler.Interfaces
+namespace Wipro.WebCrawler.Common.Interfaces
 {
     public interface IWebCrawler
     {
-        Task<Dictionary<Uri, string>> CrawlAsync(Uri uri);
+        Task<IList<CrawlerResult>> CrawlAsync(Uri uri);
     }
 }

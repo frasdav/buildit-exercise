@@ -6,9 +6,9 @@ using Microsoft.Extensions.DependencyInjection;
 using System.Net.Http;
 using Wipro.WebCrawler.App;
 using Wipro.WebCrawler.App.Helpers;
-using Wipro.WebCrawler.Interfaces;
-using Wipro.WebCrawler.Interfaces.Helpers;
-using IUrlHelper = Wipro.WebCrawler.Interfaces.Helpers.IUrlHelper;
+using Wipro.WebCrawler.Common.Interfaces;
+using Wipro.WebCrawler.Common.Interfaces.Helpers;
+using IUrlHelper = Wipro.WebCrawler.Common.Interfaces.Helpers.IUrlHelper;
 
 namespace Wipro.WebCrawler.Web
 {
