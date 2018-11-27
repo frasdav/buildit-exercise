@@ -26,7 +26,7 @@ namespace Wipro.WebCrawler.Web.Controllers
         {
             if (string.IsNullOrEmpty(url)) return View();
 
-            var results = await _webCrawler.CrawlAsync(new Uri(url));
+            var results = await _webCrawler.CrawlAsync(new Uri(url.Contains("://") ? url : $"http://{url}"));
 
             ViewBag.Data = JsonConvert.SerializeObject(results, Formatting.Indented);
 
